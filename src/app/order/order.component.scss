@@ -1,0 +1,36 @@
+@import '_fonts';
+@import '_colors';
+
+:host {
+    margin: auto;
+    width: 327px;
+    height: 567px;
+    background: $neutral-very-pale-blue;
+    border-radius: 11px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 1440px) {
+        width: 480px;
+        height: 697px;
+    }
+
+    .info {
+
+        &--title {
+            @extend .font-info__title;
+        }
+
+        &--desc {
+            @extend .font-info__desc;
+        }
+    }
+
+    .cancel {
+        @extend .font-btn;
+        cursor: pointer;
+    }
+}

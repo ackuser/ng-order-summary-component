@@ -1,0 +1,37 @@
+@mixin font($fontSize: medium, $fontWeight: medium,
+    $lineHeight: normal, $letterSpacing: normal) {
+
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-family: 'Red Hat Display', sans-serif;
+    
+    line-height: $lineHeight;
+}
+
+.font-info__title {
+    @include font(28px, bold, 38px);
+}
+
+.font-info__desc {
+    @include font(15px, medium, 25px);
+    @media screen and (min-width: 1440px) {
+        @include font(16px, medium, 26px);
+    }
+}
+
+.font-btn {
+    @include font(15px, bold, 20px);
+}
+
+
+@mixin body {
+    @include font(16px);
+}
+
+.body1 {
+    @include font(12px, medium, 15px, -.25);
+}
+
+.body2 {
+    @include font(11px, medium, 18px, -.23);
+}

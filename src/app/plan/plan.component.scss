@@ -1,0 +1,22 @@
+@import '_colors';
+
+:host {
+    width: 279px;
+    height: 81px;
+    border-radius: 11px;
+    background: $primary-pale-blue;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (min-width: 1440px) {
+        width: 354px;
+        height: 98px;
+    }
+
+    .change{
+        cursor: pointer;
+    }
+
+}

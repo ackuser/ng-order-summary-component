@@ -1,0 +1,22 @@
+@import '_colors';
+
+@mixin fxc($justifyContent: space-between) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justifyContent;
+    align-items: center;
+}
+
+.h1 {
+    @include font(32px, bold, 36px, -1px);
+}
+
+.fx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fxc {
+    @include fxc;
+}
