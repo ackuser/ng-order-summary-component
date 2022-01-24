@@ -1,10 +1,11 @@
 @import '_colors';
+@import '_fonts';
 
 :host {
     width: 279px;
     height: 81px;
     border-radius: 11px;
-    background: $primary-pale-blue;
+    background: #F7F9FF;
 
     display: flex;
     justify-content: space-around;
@@ -15,8 +16,36 @@
         height: 98px;
     }
 
-    .change{
+    .info {
+        height: 48px;
+        padding: 6px;
+        align-self: flex-start;
+        
+        &__title {
+            @include font(14px, bold, 15px);
+            color: $neutral-dark-blue;
+
+            @media screen and (min-width: 1440px) {
+                @include font(14px, bold, 18px);
+            }
+        }
+
+        &__desc {
+            @include font(14px, medium, 15px);
+            color: $neutral-desaturated-blue;
+
+            @media screen and (min-width: 1440px) {
+                @include font(16px, medium, 21px);
+            }
+        }
+    }
+
+    .change {
+        @extend .font-change;
+        flex-basis: 20%;
         cursor: pointer;
+        text-decoration: underline;
+        color: #382AE1;
     }
 
 }

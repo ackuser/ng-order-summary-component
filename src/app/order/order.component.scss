@@ -5,7 +5,7 @@
     margin: auto;
     width: 327px;
     height: 567px;
-    background: $neutral-very-pale-blue;
+    background: white;
     border-radius: 11px;
 
     display: flex;
@@ -20,17 +20,29 @@
 
     .info {
 
-        &--title {
-            @extend .font-info__title;
+        text-align: center;
+
+        &__title {
+            @include font(28px, bold, 38px);
+            height: 29px;
         }
 
-        &--desc {
-            @extend .font-info__desc;
+        &__desc {
+            @include font(15px, medium, 25px);
+
+            @media screen and (min-width: 1440px) {
+                @include font(16px, medium, 26px);
+            }
+
+            color: $neutral-desaturated-blue;
+            height: 75px;
         }
     }
 
     .cancel {
         @extend .font-btn;
         cursor: pointer;
+        color: $neutral-desaturated-blue;
+        margin-top: 0;
     }
 }
