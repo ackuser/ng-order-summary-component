@@ -1,7 +1,19 @@
-<img
-  class="svg--bg-desktop"
-  src="../assets/images/pattern-background-desktop.svg"
-  alt="Hero"
-/>
-<!-- <div class="svg--bg"></div> -->
-<router-outlet></router-outlet>
+<ng-container
+  *ngIf="{
+    isMobile: isMobile$ | async
+  } as d"
+>
+{{d.isMobile}}
+
+  <img
+    class="svg--bg"
+    [src]="
+      '../assets/images/pattern-background-' +
+      (d.isMobile ? 'mobile' : 'desktop') +
+      '.svg'
+    "
+    alt="Hero"
+  />
+  <!-- <div class="svg--bg"></div> -->
+  <router-outlet></router-outlet>
+</ng-container>

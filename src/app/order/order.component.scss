@@ -13,13 +13,12 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 376px) {
         width: 480px;
         height: 697px;
     }
 
     .info {
-
         text-align: center;
 
         &__title {
@@ -29,13 +28,15 @@
 
         &__desc {
             @include font(15px, medium, 25px);
-
-            @media screen and (min-width: 1440px) {
-                @include font(16px, medium, 26px);
-            }
-
-            color: $neutral-desaturated-blue;
             height: 75px;
+            margin: 32px 0;
+            padding: 0 40px;
+            color: $neutral-desaturated-blue;
+            
+            @media screen and (min-width: 376px) {
+                @include font(16px, medium, 26px);
+                padding: 0 15%;
+            }
         }
     }
 
@@ -44,5 +45,9 @@
         cursor: pointer;
         color: $neutral-desaturated-blue;
         margin-top: 0;
+
+        @media screen and (min-width: 376px) {
+            margin-bottom: 10%;
+        }
     }
 }

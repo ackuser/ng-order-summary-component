@@ -11,7 +11,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 376px) {
         width: 354px;
         height: 98px;
     }
@@ -25,7 +25,7 @@
             @include font(14px, bold, 15px);
             color: $neutral-dark-blue;
 
-            @media screen and (min-width: 1440px) {
+            @media screen and (min-width: 376px) {
                 @include font(14px, bold, 18px);
             }
         }
@@ -34,7 +34,7 @@
             @include font(14px, medium, 15px);
             color: $neutral-desaturated-blue;
 
-            @media screen and (min-width: 1440px) {
+            @media screen and (min-width: 376px) {
                 @include font(16px, medium, 21px);
             }
         }
